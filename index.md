@@ -16,7 +16,7 @@ The effectiveness of mixing is the most important aspect of this problem. The mi
 
 The first revision of the mixing head was meant to simply induce a vortex within the vat, but the particles at the bottom would not be lifted up efficiently.
 
-<img src="images/images/mixerA" alt="First Mixer" class="inline"/>
+<img src="images/images/mixerA.PNG" alt="First Mixer" class="inline"/>
 
 A fully analog system using a 555 timer was considered, but would reduce the ease of adjustability between mix intervals. 
 
