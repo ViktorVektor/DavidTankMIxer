@@ -1,3 +1,9 @@
+image {
+  text-align:center;
+  
+}
+
+
 ## Fish Tank Solution Mixer
 
 A mini-project purpose built for a vat of calcium carbonate solution. The device fits onto the lid of the vat, where a mixing head dips into the solution. A time interval can be set in between mixing cycles.
@@ -13,8 +19,8 @@ An alkaline solution of calcium carbonate is used for the operation of a tropica
 The effectiveness of mixing is the most important aspect of this problem. The mixer should be able to effectively mix the settled particles from the bottom of the vat, in a way that nearly homogenously distributes it within the rest of the solution. A secondary requirements of the device is the displacement of the mixing head and the material used for it. Too much displacement of liquid in the vat will reduce the efficiency of the Fish Tank system. As for the mixing head's material, it must not degrade or react within the solution. A tertiary consideration was the power consumption of the device. Ideally, the device should barely use any power between untervals, and should use power efficienty when mixing.
 
 <table><tr>
-  <td> <img src="images/calcium.jpg" alt="Calcium" class="inline" height=35% width=35% display=block margin-left=auto margin-right=auto/> </td>
-  <td> <img src="images/carbonate.jpg" alt="Carbonate" class="inline" height=35% width=35% display=block/> </td>
+  <td> <div style="text-align: center"><img src="images/calcium.jpg" alt="Calcium" height=35% width=35%/></div> </td>
+  <td> <div style="text-align: center"><img src="images/carbonate.jpg" alt="Carbonate"  height=35% width=35%/><div/> </td>
 </tr><table>
 ### Initial Approaches
 
