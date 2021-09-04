@@ -1,10 +1,8 @@
-## asdasd
+## Fish Tank Solution Mixer
 
-You can use the [editor on GitHub](https://github.com/ViktorVektor/Fish-Tank-Solution-MIxer/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+A mini-project purpose built for a vat of alkaline carbonate solution.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
+### Problem
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
