@@ -12,8 +12,8 @@ An alkaline solution of calcium carbonate is used for the operation of a tropica
 
 The effectiveness of mixing is the most important aspect of this problem. The mixer should be able to effectively mix the settled particles from the bottom of the vat, in a way that nearly homogenously distributes it within the rest of the solution. A secondary requirements of the device is the displacement of the mixing head and the material used for it. Too much displacement of liquid in the vat will reduce the efficiency of the Fish Tank system. As for the mixing head's material, it must not degrade or react within the solution. A tertiary consideration was the power consumption of the device. Ideally, the device should barely use any power between untervals, and should use power efficienty when mixing.
 
-<img src="images/calcium.jpg" alt="Calcium" class="inline" height=50% width=50% display=inline/>
-<img src="images/carbonate.jpg" alt="Carbonate" class="inline" height=50% width=50% display=inline/>
+<img src="images/calcium.jpg" alt="Calcium" class="inline" height=25% width=25% display=block/>
+<img src="images/carbonate.jpg" alt="Carbonate" class="inline" height=25% width=25% display=block/>
 
 ### Initial Approaches
 
