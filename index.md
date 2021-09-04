@@ -1,7 +1,7 @@
 
 <style>
 
-  image {
+  img {
     text-align:center;
   }
   
