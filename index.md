@@ -6,7 +6,7 @@ A mini-project purpose built for a vat of calcium carbonate solution. The device
 
 An alkaline solution of calcium carbonate is used for the operation of a tropical fish tank. However, the solution becomes saturated with extra particulates settling at the bottom. 
 
-<img src="images/Eimages/mixerA" alt="hi" class="inline"/>
+
 
 ### Design Considerations
 
@@ -15,6 +15,8 @@ The effectiveness of mixing is the most important aspect of this problem. The mi
 ### Initial Approaches
 
 The first revision of the mixing head was meant to simply induce a vortex within the vat, but the particles at the bottom would not be lifted up efficiently.
+
+<img src="images/images/mixerA" alt="First Mixer" class="inline"/>
 
 A fully analog system using a 555 timer was considered, but would reduce the ease of adjustability between mix intervals. 
 
