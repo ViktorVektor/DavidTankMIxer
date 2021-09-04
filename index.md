@@ -1,6 +1,11 @@
-image {
-  text-align:center;
-}
+
+<style>
+
+  image {
+    text-align:center;
+  }
+  
+</style>
 
 
 ## Fish Tank Solution Mixer
