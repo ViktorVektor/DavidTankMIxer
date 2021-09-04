@@ -1,34 +1,22 @@
 ## Fish Tank Solution Mixer
 
-A mini-project purpose built for a vat of alkaline carbonate solution.
+A mini-project purpose built for a vat of calcium carbonate solution. The device fits onto the lid of the vat, where a mixing head dips into the solution. A time interval can be set in between mixing cycles.
 
-### Problem
+### The Problem
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+An alkaline solution of calcium carbonate is used for the operation of a tropical fish tank. However, the solution becomes saturated with extra particulates settling at the bottom. 
 
-```markdown
-Syntax highlighted code block
+<img src="images/Eimages/mixerA" alt="hi" class="inline"/>
 
-# Header 1
-## Header 2
-### Header 3
+### Design Considerations
 
-- Bulleted
-- List
+The effectiveness of mixing is the most important aspect of this problem. The mixer should be able to effectively mix the settled particles from the bottom of the vat, in a way that nearly homogenously distributes it within the rest of the solution. A secondary requirements of the device is the displacement of the mixing head and the material used for it. Too much displacement of liquid in the vat will reduce the efficiency of the Fish Tank system. As for the mixing head's material, it must not degrade or react within the solution.
 
-1. Numbered
-2. List
+### Initial Approaches
 
-**Bold** and _Italic_ and `Code` text
+The first revision of the mixing head was meant to simply induce a vortex within the vat, but the particles at the bottom would not be lifted up efficiently.
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ViktorVektor/Fish-Tank-Solution-MIxer/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+A fully analog system using a 555 timer was considered, but would reduce the ease of adjustability between mix intervals. 
 
 ### Support or Contact
 
