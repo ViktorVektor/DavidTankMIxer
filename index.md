@@ -68,4 +68,6 @@ https://github.com/ViktorVektor/DavidTankMIxer.git
 Power: 4.5-6V, 4x AA Batteries or 5V 0.250A DC
   USB power from a common phone charger would suffice.
   
+To turn on, the device can be powered from either the 
+  
 
