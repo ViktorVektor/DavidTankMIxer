@@ -42,6 +42,7 @@ unsigned long lastButtonPress = 0;
 
 int pos = 0;
 
+// // For a button interrupt
 //void wakeUp()
 //{
 //  //Handler for pin interrupt
@@ -124,28 +125,43 @@ void spinCycle()
 //  digitalWrite(SERVO_SWITCH, HIGH);
   motor.attach(SERVO_PWM, MIN_PULSE_WIDTH, MAX_PULSE_WIDTH);
 
-  //1 minute of mixing
+  // Using a modified 360-degree continuous SG90 Servo
+  // Due to some electrical quirk, the servo stops spinning when not changing the pulse width.
   for(int y = 0; y < cycles; y++)
   {
-    // 2 second  operation
-    for (int x = MIN_PULSE_WIDTH; x < MAX_PULSE_WIDTH; x+=50)
+    for(int x = 0; x < 25; x += 1)
     {
-      motor.writeMicroseconds(x);
-      delay(25);
+      motor.writeMicroseconds(MAX_PULSE_WIDTH);
+      delay(20);
+      motor.writeMicroseconds(MIN_PULSE_WIDTH);
+      delay(20);  
     }
-    for (int x = MAX_PULSE_WIDTH; x > MIN_PULSE_WIDTH; x-=50)
-    {
-      motor.writeMicroseconds(x);
-      delay(25);
-    }
+    //motor.writeMicroseconds(500);
+    
   }
+//  // Code block for using a normal 180-degree SG90 Servo
+//  //1 minute of mixing
+//  for(int y = 0; y < cycles; y++)
+//  {
+//    // 2 second  operation
+//    for (int x = MIN_PULSE_WIDTH; x < MAX_PULSE_WIDTH; x+=50)
+//    {
+//      motor.writeMicroseconds(x);
+//      delay(25);
+//    }
+//    for (int x = MAX_PULSE_WIDTH; x > MIN_PULSE_WIDTH; x-=50)
+//    {
+//      motor.writeMicroseconds(x);
+//      delay(25);
+//    }
+//  }
   motor.detach();
 }
 
 void setInterval()
 {
   display.clearDisplay();
-  display.print("Rotate to Adjust -->");
+  display.print("Rotate to Adjust ->");
   display.display();
   boolean selection = true;
 
@@ -213,7 +229,7 @@ void setInterval()
         display.clearDisplay();
         display.setCursor(0,15);
         display.setTextSize(2);
-        display.print("Sleeping . .");
+        display.print("Sleeping");
         display.display();
         delay(1000);
         
