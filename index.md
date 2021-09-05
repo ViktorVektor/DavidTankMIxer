@@ -41,7 +41,7 @@ The device's enclosure and mixer will be FDM 3D Printed using PET-G, a common ma
   
 To adjust the time interval, a rotary encoder and an OLED display were added. Rotating the encoder would adjust the interval by the minute, which would then be displayed. A transistor would be used to switch the display on or off in order to save power between mix cycles.
   
-To power the device, a combination of battery power and USB power. If a plug is accessible, USB power can be used. Otherwise, battery power can be used but at a reduced lifetime. Note, both cannot be used at the same time because there is no switching functionality. 
+To power the device, a combination of battery power and USB power. If a plug is accessible, USB power can be used. Otherwise, battery power can be used but at a reduced lifetime.
   
 ### Next Steps
   
@@ -49,6 +49,8 @@ To power the device, a combination of battery power and USB power. If a plug is 
   
 ### Code
   
-The code for the device can be seen here:
+The code for the device can be seen on the repository:
   
-https://github.com/ViktorVektor/DavidTankMIxer/blob/main/David_Fish_Tank_Mixer_Final.ino
+https://github.com/ViktorVektor/DavidTankMIxer.git
+  
+  
