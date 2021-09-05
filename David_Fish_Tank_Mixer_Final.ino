@@ -22,12 +22,6 @@ Servo motor;
 #define SCREEN_ADDRESS 0x3C ///< See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-#define NUMFLAKES 10
-
-#define LOGO_HEIGHT   16
-#define LOGO_WIDTH    16
-
-
 #define CLK A1
 #define DT A0
 #define SW 2
