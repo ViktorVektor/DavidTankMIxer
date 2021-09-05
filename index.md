@@ -1,13 +1,3 @@
-
-<style>
-
-  img {
-    text-align:center;
-  }
-  
-</style>
-
-
 ## Fish Tank Solution Mixer
 
 A mini-project purpose built for a vat of calcium carbonate solution. The device fits onto the lid of the vat, where a mixing head dips into the solution. A time interval can be set in between mixing cycles.
@@ -33,7 +23,7 @@ The effectiveness of mixing is the most important aspect of this problem. The mi
 
 The device will have 3 main aspects: Controller, Mixer, and Power. The first revision of the mixing head was meant to simply induce a vortex within the vat, but the particles at the bottom would not be lifted up efficiently.
 
-<img src="images/toplevel1.PNG" alt="Top Level 1" class="inline" height=50% width=50%/>
+<img src="images/toplevel1.JPG" alt="Top Level 1" class="inline" height=50% width=50%/>
 
 A fully analog system using a 555 timer was considered, but would lmit flexibility and accuracy of adjusting the time interval. In addition, it would limit future functionality if the device were to be integrated into a larger Fish Tank management system.
 
