@@ -70,7 +70,7 @@ To power the device, a combination of battery power and USB power. If a plug is 
   
 ### 05/09/2021
  
- >>> Electronics
+ Electronics
 	Will be focusing less on battery power as the Arduino Mini boards won't arrive until the end of the month
 	Switched to 360 motor, can control direction but no speed
 	Using Arduino nano in low power mode and removing LED
@@ -82,14 +82,14 @@ To power the device, a combination of battery power and USB power. If a plug is 
 	Updated schematic
 ![image](https://user-images.githubusercontent.com/41247872/132135948-7e510c44-363d-44be-b8af-235131787c02.png)
   
->>> Software
+Software
 	Cleaned up the rest of the code and uploaded to repo, pretty much complete
 	Added new function for adjusting mixing time, default 3 minutes
 	Added new function for displaying the saved interval and mixing time
 	Had an issue with the 360 sg90, setting a single pulse width seems to stall it if it isn't switched to another pulse width
 		Solved by switching to another pulse width every few milliseconds
 		
- >>> Hardware
+ Hardware
 	Will most likely use perf board on hand to complete the project
 	Gathered necessary components, looks like there is enough
 	LED of the Arduino will need to be desoldered
@@ -100,7 +100,6 @@ To power the device, a combination of battery power and USB power. If a plug is 
 		Will instead extend the internal hex socket to hold the head through friction
 		
 	Mixing head v1 and v2 were not effective as particles gathered at the bottom center of the container, induced a vortex in the liquid that forced the particles down
-![image](https://user-images.githubusercontent.com/41247872/132135953-f9665db9-43bb-4eb3-aa01-0d298b796c45.png)
 
 
 
