@@ -19,6 +19,8 @@ The effectiveness of mixing is the most important aspect of this problem. The mi
 </tr><table>
 </image>
   
+  
+  
 ### Initial Approaches
 
 The device will have 3 main aspects: Controller, Mixer, and Power. The first revision of the mixing head was meant to simply induce a vortex within the vat, but the particles at the bottom would not be lifted up efficiently.
@@ -31,6 +33,8 @@ The production of the mixing head and enclosure was to be done with an FDM 3D pr
 
 To power the device, having only a set of 4 AA Batteries to power it would have been sufficient, but may not have been enough due to the required amount of power to mix the solution.
 
+  
+  
 ### Current Revision
   
 <img src="images/toplevel2.PNG" alt="Top Level 2" class="inline" height=50% width=50%/>
@@ -43,9 +47,13 @@ To adjust the time interval, a rotary encoder and an OLED display were added. Ro
   
 To power the device, a combination of battery power and USB power. If a plug is accessible, USB power can be used. Otherwise, battery power can be used but at a reduced lifetime.
   
+  
+  
 ### Next Steps
   
  As of Septermber 2021, The enclosrue and electronics of the device have been finalized. The mixing head and coupling still need to be tested for their efficiency and strength. The device is planned to be shipped out by the 3rd week of September.
+  
+  
   
 ### Code
   
@@ -54,3 +62,10 @@ The code for the device can be seen on the repository:
 https://github.com/ViktorVektor/DavidTankMIxer.git
   
   
+  
+### Usage Instructions
+  
+Power: 4.5-6V, 4x AA Batteries or 5V 0.250A DC
+  USB power from a common phone charger would suffice.
+  
+
