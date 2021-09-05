@@ -27,8 +27,8 @@ An alkaline solution of calcium carbonate is used for the operation of a tropica
 
 The effectiveness of mixing is the most important aspect of this problem. The mixer should be able to effectively mix the settled particles from the bottom of the vat, in a way that nearly homogenously distributes it within the rest of the solution. A secondary requirements of the device is the displacement of the mixing head and the material used for it. Too much displacement of liquid in the vat will reduce the efficiency of the Fish Tank system. As for the mixing head's material, it must not degrade or react within the solution. A tertiary consideration was the power consumption of the device. Ideally, the device should barely use any power between untervals, and should use power efficienty when mixing.
 
-<img src="images/calcium.jpg" alt="Calcium" height=35% width=35%/>
-<img src="images/carbonate.jpg" alt="Carbonate"  height=35% width=35%/>
+<img src="images/calcium.jpg" alt="Calcium" height=35% width=35%/></img>
+<img src="images/carbonate.jpg" alt="Carbonate"  height=35% width=35%/></img>
   
   
   
@@ -36,7 +36,7 @@ The effectiveness of mixing is the most important aspect of this problem. The mi
 
 The device will have 3 main aspects: Controller, Mixer, and Power. The first revision of the mixing head was meant to simply induce a vortex within the vat, but the particles at the bottom would not be lifted up efficiently.
 
-<img src="images/toplevel1.JPG" alt="Top Level 1" class="inline" height=50% width=50%/>
+<img src="images/toplevel1.JPG" alt="Top Level 1" class="inline" height=50% width=50%/></img>
 
 A fully analog system using a 555 timer was considered, but would lmit flexibility and accuracy of adjusting the time interval. In addition, it would limit future functionality if the device were to be integrated into a larger Fish Tank management system.
 
@@ -53,7 +53,7 @@ https://github.com/ViktorVektor/DavidTankMIxer.git
   
 ### 03/09/2021
   
-<img src="images/toplevel2.PNG" alt="Top Level 2" class="inline" height=50% width=50%/>
+<img src="images/toplevel2.PNG" alt="Top Level 2" class="inline" height=50% width=50%/></img>
 
 Progressing from the previous approaches, the controller was upgraded into an Arduino Nano, underclocked at 8Mhz to lower power usage. This will allow for flexibility in the devices function if additional features like bluetooth or IoT functionality is added. This controller can also vary the movement of the motor to better mix the solution.
   
