@@ -83,23 +83,25 @@ To power the device, a combination of battery power and USB power. If a plug is 
 ![image](https://user-images.githubusercontent.com/41247872/132135948-7e510c44-363d-44be-b8af-235131787c02.png)
   
 Software
-	Cleaned up the rest of the code and uploaded to repo, pretty much complete
-	Added new function for adjusting mixing time, default 3 minutes
-	Added new function for displaying the saved interval and mixing time
-	Had an issue with the 360 sg90, setting a single pulse width seems to stall it if it isn't switched to another pulse width
-		Solved by switching to another pulse width every few milliseconds
+	
+Cleaned up the rest of the code and uploaded to repo, pretty much complete
+Added new function for adjusting mixing time, default 3 minutes
+Added new function for displaying the saved interval and mixing time
+Had an issue with the 360 sg90, setting a single pulse width seems to stall it if it isn't switched to another pulse width
+- Solved by switching to another pulse width every few milliseconds
 		
  Hardware
-	Will most likely use perf board on hand to complete the project
-	Gathered necessary components, looks like there is enough
-	LED of the Arduino will need to be desoldered
 	
-	Testing of mixing coupling and head begins
+Will most likely use perf board on hand to complete the project
+Gathered necessary components, looks like there is enough
+LED of the Arduino will need to be desoldered
+
+Testing of mixing coupling and head begins
+
+Original coupling shaft was changed, the flexing lock breaks too easily when trying to remove the mixing head
+- Will instead extend the internal hex socket to hold the head through friction
 	
-	Original coupling shaft was changed, the flexing lock breaks too easily when trying to remove the mixing head
-		Will instead extend the internal hex socket to hold the head through friction
-		
-	Mixing head v1 and v2 were not effective as particles gathered at the bottom center of the container, induced a vortex in the liquid that forced the particles down
+Mixing head v1 and v2 were not effective as particles gathered at the bottom center of the container, induced a vortex in the liquid that forced the particles down
 
 
 
