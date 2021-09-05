@@ -43,7 +43,7 @@ To adjust the time interval, a rotary encoder and an OLED display were added. Ro
   
 To power the device, a combination of battery power and USB power. If a plug is accessible, USB power can be used. Otherwise, battery power can be used but at a reduced lifetime. Note, both cannot be used at the same time because there is no switching functionality. 
   
-### Action Items
+### Next Steps
   
  As of Septermber 2021, The enclosrue and electronics of the device have been finalized. The mixing head and coupling still need to be tested for their efficiency and strength. The device is planned to be shipped out by the 3rd week of September.
   
@@ -51,4 +51,4 @@ To power the device, a combination of battery power and USB power. If a plug is 
   
 The code for the device can be seen here:
   
-https://github.com/ViktorVektor/DavidTankMIxer/blob/308d95bd5fd42b4641e30e087b76e8746637e5e6/David_Fish_Tank_Mixer_Final.ino
+https://github.com/ViktorVektor/DavidTankMIxer/blob/main/David_Fish_Tank_Mixer_Final.ino
