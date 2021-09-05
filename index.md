@@ -31,7 +31,7 @@ The effectiveness of mixing is the most important aspect of this problem. The mi
 <table><tr>
   <td> <div style="text-align: center"><img src="images/calcium.jpg" alt="Calcium" height=35% width=35%/></div> </td>
   <td> <div style="text-align: center"><img src="images/carbonate.jpg" alt="Carbonate"  height=35% width=35%/><div/> </td>
-</tr><table>
+</tr></table>
 </image>
   
   
