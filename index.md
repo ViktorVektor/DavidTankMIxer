@@ -76,7 +76,7 @@ To power the device, a combination of battery power and USB power. If a plug is 
 		Battery power predicted to last about 5 days
 	Added capacitor to smoothen voltage spike when starting up servo to spin
 	Updated schematic
-![image](https://user-images.githubusercontent.com/41247872/132135948-7e510c44-363d-44be-b8af-235131787c02.png | height=50)
+![image](https://user-images.githubusercontent.com/41247872/132135948-7e510c44-363d-44be-b8af-235131787c02.png | height=0.50)
   
 Software
 	
