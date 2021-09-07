@@ -82,7 +82,7 @@ Improved functionality of switching between USB and battery power
 	Battery power predicted to last about 5 days
 Added capacitor to smoothen voltage spike when starting up servo to spin
 	
-Updated schematic
+Updated schematic (please excuse the messy layout)
 ![image](https://user-images.githubusercontent.com/41247872/132135948-7e510c44-363d-44be-b8af-235131787c02.png)
   
 Software
