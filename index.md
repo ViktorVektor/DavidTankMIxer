@@ -1,5 +1,7 @@
 ## Fish Tank Solution Mixer
 
+![image](https://user-images.githubusercontent.com/41247872/132284967-0ef4c3ed-24eb-45bd-ba2f-e042537c1136.png)
+
 A mini-project purpose built for a vat of calcium carbonate solution. The device fits onto the lid of the vat, where a mixing head dips into the solution. A time interval can be set in between mixing cycles.
 
 
