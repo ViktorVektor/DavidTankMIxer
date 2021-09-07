@@ -9,8 +9,7 @@
 #define MAX_PULSE_WIDTH 1250
 #define MIN_PULSE_WIDTH 250
 
-#define CYCLE_LENGTH 30  // 30 operations for a minute of mixing
-#define MIX_DURATION 3 // 3 minutes of mixing
+#define CYCLE_LENGTH 30  // 30 operations for a minute of mixing, since operations take 2s
 
 Servo motor;
 
@@ -26,7 +25,8 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 #define DT A0
 #define SW 2
 
-int interval = 0;
+int interval = 60; // default 30 minutes
+int MIX_DURATION = 3; // default 3 minutes of mixing
 int multiplier = 1;
 int cycles = CYCLE_LENGTH * MIX_DURATION;
 
@@ -81,22 +81,35 @@ void setup() {
   
   // clear the buffer, setup the first text 
   display.clearDisplay();
-  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(10,16);
   display.display();
   delay(50);
-
+  
   // time setting function
   setInterval();
 
+  // mix duration setting function
+  setMixtime();
+
+  // sleeping time display output
+  deviceSleep();
+
+//  display.clearDisplay();
+//  display.setTextSize(2);
+//  display.setTextColor(WHITE);
+//  display.setCursor(10,8);
+//  display.print(MIX_DURATION);
+//  display.display();
+//  delay(2000);
+
+  
   // begind going into sleep mode
   digitalWrite(DISPLAY_SWITCH, LOW);
 
   // requrested interval time in terms of 4s chunks (so 1 minute is 15x multiplier), 
-  //minus 4s offset, interval between mixing considers mixing time of 3 minutes.
+  //minus 4s offset, interval between mixing considers mixing time.
   multiplier = ((interval - MIX_DURATION) * 15) - 1;
-
+  cycles = CYCLE_LENGTH * MIX_DURATION;
+ 
   // default interval of 1 minute rest
   if(interval <= 1)
   {
@@ -121,17 +134,13 @@ void spinCycle()
 
   // Using a modified 360-degree continuous SG90 Servo
   // Due to some electrical quirk, the servo stops spinning when not changing the pulse width.
-  for(int y = 0; y < cycles; y++)
+  // MIN for CCW mixing, MAX for CW mixing
+  for(int y = 0; y < (cycles*20); y++)
   {
-    for(int x = 0; x < 25; x += 1)
-    {
       motor.writeMicroseconds(MAX_PULSE_WIDTH);
       delay(20);
-      motor.writeMicroseconds(MIN_PULSE_WIDTH);
+      motor.writeMicroseconds(MAX_PULSE_WIDTH-100);
       delay(20);  
-    }
-    //motor.writeMicroseconds(500);
-    
   }
 //  // Code block for using a normal 180-degree SG90 Servo
 //  //1 minute of mixing
@@ -151,11 +160,94 @@ void spinCycle()
 //  }
   motor.detach();
 }
+void setMixtime()
+{
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(10,8);
+  display.print("Adjust Mix ->");
+  display.display();
+  boolean selection = true;
+
+  while(selection)
+  {
+    // Read the current state of CLK
+    currentStateCLK = digitalRead(CLK);
+    
+    // If last and current state of CLK are different, then pulse occurred
+    // React to only 1 state change to avoid double count
+    if (currentStateCLK != lastStateCLK  && currentStateCLK == 1){
+  
+      // If the DT state is different than the CLK state then
+      // the encoder is rotating CCW so decrement
+      if (digitalRead(DT) != currentStateCLK) {
+        if (MIX_DURATION > 0) // handling negative values
+        {
+          MIX_DURATION--;
+        }
+        else
+        {
+          MIX_DURATION = 0;
+        }
+        
+      } else {
+        // Encoder is rotating CW so increment
+        MIX_DURATION ++;
+      }
+
+      // display the current time setting
+      display.clearDisplay();
+      display.setCursor(10,2);
+      display.setTextSize(1);
+      display.print("Mix Interval: ");
+      display.setCursor(0,15);
+      display.setTextSize(2);
+      display.print(MIX_DURATION);
+      display.print("m");
+      display.display();
+    }
+    
+  
+    // Remember last CLK state for encoder
+    lastStateCLK = currentStateCLK;
+  
+    // Read the button state
+    int btnState = digitalRead(SW);
+  
+    //If we detect LOW signal, button is pressed
+    if (btnState == LOW) {
+      //if 50ms have passed since last LOW pulse, it means that the
+      //button has been pressed, released and pressed again
+      if (millis() - lastButtonPress > 50) {
+
+        //close the time selection loop
+        selection = false;
+        
+        display.clearDisplay();
+        display.setCursor(0,8);
+        display.setTextSize(2);
+        display.print("Mix Set!");
+        display.display();
+        delay(500);
+      }
+  
+      // Remember last button press event
+      lastButtonPress = millis();
+    }
+  
+    // Put in a slight delay to help debounce the reading
+    delay(1);
+  }
+}
 
 void setInterval()
 {
   display.clearDisplay();
-  display.print("Rotate to Adjust ->");
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(10,8);
+  display.print("Adjust Sleep ->");
   display.display();
   boolean selection = true;
 
@@ -214,18 +306,11 @@ void setInterval()
         selection = false;
         
         display.clearDisplay();
-        display.setCursor(0,15);
+        display.setCursor(0,8);
         display.setTextSize(2);
-        display.print("Time Set!");
+        display.print("Sleep Set!");
         display.display();
-        delay(1000);
-
-        display.clearDisplay();
-        display.setCursor(0,15);
-        display.setTextSize(2);
-        display.print("Sleeping");
-        display.display();
-        delay(1000);
+        delay(500);
         
       }
   
@@ -237,4 +322,20 @@ void setInterval()
     delay(1);
   }
 
+}
+
+void deviceSleep()
+{
+  display.clearDisplay();
+  display.setCursor(0,2);
+  display.setTextSize(1);
+  display.print("Sleep Time: ");
+  display.print(interval);
+  display.print("m");
+  display.setCursor(0,12);
+  display.print("Mix Time: ");
+  display.print(MIX_DURATION);
+  display.print("m");
+  display.display();
+  delay(1500);
 }
