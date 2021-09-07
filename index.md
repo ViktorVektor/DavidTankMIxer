@@ -66,8 +66,10 @@ To power the device, a combination of battery power and USB power. If a plug is 
   
 ### 05/09/2021
  
- Electronics
-	
+![image](https://user-images.githubusercontent.com/41247872/132284967-0ef4c3ed-24eb-45bd-ba2f-e042537c1136.png)
+
+ 
+Electronics
 	
 Will be focusing less on battery power as the Arduino Mini boards won't arrive until the end of the month
 Switched to 360 motor, can control direction but no speed
@@ -100,7 +102,7 @@ Testing of mixing coupling and head begins
 Original coupling shaft was changed, the flexing lock breaks too easily when trying to remove the mixing head
 - Will instead extend the internal hex socket to hold the head through friction
 	
-Mixing head v1 and v2 were not effective as particles gathered at the bottom center of the container, induced a vortex in the liquid that forced the particles down
+Mixing head v1 and v2 were not effective as particles gathered at the bottom center of the container, induced a vortex in the liquid that forced the particles down. A third mixer was developed (as seen in this log's image). Though it mixed well by lifting up particles from the bottom of the tank, the shaft had been too fragile for repeated use.
 
 
 
