@@ -67,16 +67,19 @@ To power the device, a combination of battery power and USB power. If a plug is 
 ### 05/09/2021
  
  Electronics
-	Will be focusing less on battery power as the Arduino Mini boards won't arrive until the end of the month
-	Switched to 360 motor, can control direction but no speed
-	Using Arduino nano in low power mode and removing LED
-	Servo switch removed, diodes removed because voltage drop was too significant
-	Improved functionality of switching between USB and battery power
-		When switched to battery, will only use battery and turns off otherwise.
-		Battery power predicted to last about 5 days
-	Added capacitor to smoothen voltage spike when starting up servo to spin
-	Updated schematic
-![image](https://user-images.githubusercontent.com/41247872/132135948-7e510c44-363d-44be-b8af-235131787c02.png | height=0.50)
+	
+	
+Will be focusing less on battery power as the Arduino Mini boards won't arrive until the end of the month
+Switched to 360 motor, can control direction but no speed
+Using Arduino nano in low power mode and removing LED
+Servo switch removed, diodes removed because voltage drop was too significant
+Improved functionality of switching between USB and battery power
+	When switched to battery, will only use battery and turns off otherwise.
+	Battery power predicted to last about 5 days
+Added capacitor to smoothen voltage spike when starting up servo to spin
+	
+Updated schematic
+![image](https://user-images.githubusercontent.com/41247872/132135948-7e510c44-363d-44be-b8af-235131787c02.png)
   
 Software
 	
