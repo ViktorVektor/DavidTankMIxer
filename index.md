@@ -13,7 +13,7 @@ Power: 4.5-6V, 4x AA Batteries or 5V 0.500A DC
   
 A switch can be used to toggle between each power source, but cannot be used at the same time. If the battery drops below 4.5V, it may not turn on and will need to be recharged. Stall current (when the motor is stuck) shouldn't exceed 400mA, but might risk burning out if it does. The battery circuitry lacks back current protection, so please take care when inserting batteries. 
 
-Upon turning on, a prompt to set the interval time will appear on the display. Turn the knob to increase or decrease the time, then click the knob to save that time. The default is 60 minutes. The next prompt will be the mixing time, default 3 minutes of contiuous rotation. Interval and mix settings or **not** saved when the device is turned off and will need to be set again if it does.
+Upon turning on, a prompt to set the interval time will appear on the display. Turn the knob to increase or decrease the time, then click the knob to save that time. The default is 60 minutes. The next prompt will be the mixing time, default 3 minutes of contiuous rotation. Interval and mix settings are **not** saved when the device is turned off and will need to be set again if it does.
 
 Once the settings are inputted, the device will enter a mix cycle right away. You may use this time to confirm the device's proper operation by observing the rotating mixer head. The screen should also have turned off to save power. After the the mix cycle ends, it will go into sleep mode to wait out the interval.
 
